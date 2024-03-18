@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <h1>Detected Image</h1>
+    <!-- Image element to display the detected image -->
+    <img id="detectedImage" alt="Detected Image">
+
+    <script>
+        // Function to make the API request and update the image element
+        function showDetectedImage() {
+            $.ajax({
+                url: 'http://127.0.0.1:5000/found',  // Update with your API endpoint
+                method: 'GET',
+                success: function (data) {
+                    console.log('Test');
+                    // Check if the response contains a valid detection
+                    if (data.image) {
+                        // Update the source of the image element with the base64-encoded image
+                        $('#detectedImage').attr('src', 'data:image/png;base64,' + data.image);
+                    } else {
+                        console.log('No valid detection found');
+                    }
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+        }
+
+        // Call the function when the page loads
+        $(document).ready(function () {
+            showDetectedImage();
+            // Optionally, you can set an interval to periodically update the image
+            // setInterval(showDetectedImage, 5000);  // Update every 5 seconds
+        });
+    </script>
+</body>
+
+</html>

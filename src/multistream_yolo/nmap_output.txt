@@ -1,0 +1,10 @@
+Interface: eth0, datalink type: EN10MB (Ethernet)
+Starting arp-scan 1.9 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/)
+192.168.1.1	70:f3:5a:75:17:0f	(Unknown)
+192.168.1.101	00:e0:4c:68:25:35	REALTEK SEMICONDUCTOR CORP.
+192.168.1.105	a0:ce:c8:67:2e:61	CE LINK LIMITED
+192.168.1.103	3c:52:a1:71:18:d4	(Unknown)
+192.168.1.104	fe:4d:1a:e2:bc:83	(Unknown)
+
+5 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.9: 256 hosts scanned in 2.864 seconds (89.39 hosts/sec). 5 responded

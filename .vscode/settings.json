@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "python.pythonPath": "/media/manu/manuLinux/system/python/anaconda/anaconda/envs/cq/bin/python",
+    "python.formatting.autopep8Args": ["--ignore", "E402"]
+}
